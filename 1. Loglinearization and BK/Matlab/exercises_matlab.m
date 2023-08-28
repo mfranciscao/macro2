@@ -5,17 +5,18 @@
 
 
 beta = 0.99;
-sigma = 1;
+sigma = 5;
 kappa = 1.2;
 phi = 1.5;
 rho = 0.05;
-rho_m = 0.9;
+rho_m = 0.5;
+sigma_m = 0.025;
 
 g0 = [1 1/sigma 0 0; 0 beta 0 0; 0 -phi 1 -1; 0 0 0 1];
 
 g1 = [1 0 1/sigma 0; -kappa 1 0 0; 0 0 0 0; 0 0 0 rho_m];
 
-Psi = [0;0;0;1];
+Psi = [0;0;0;sigma_m];
 
 Pi = [-1 -1/sigma; -beta 0; 0 0; 0 0];
 

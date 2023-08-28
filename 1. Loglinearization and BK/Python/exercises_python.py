@@ -14,17 +14,18 @@ np.set_printoptions(suppress=True)
 
 
 beta = 0.99
-sigma = 1
+sigma = 5
 kappa = 1.2
 phi = 1.5
 rho = 0.05
-rho_m = 0.90
+rho_m = 0.5
+sigma_m = 0.025
 
 g0 = np.array([[1, 1/sigma, 0, 0],[0, beta, 0, 0], [0, -phi, 1, -1], [0, 0, 0, 1]])
 
 g1 = np.array([[1, 0, 1/sigma, 0], [-kappa, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, rho_m]])
 
-Psi = np.array([[0], [0], [0], [1]])
+Psi = np.array([[0], [0], [0], [sigma_m]])
 
 Pi = np.array([[-1, -1/sigma], [-beta, 0], [0, 0], [0, 0]])
 
